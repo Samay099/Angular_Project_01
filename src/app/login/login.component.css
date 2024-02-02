@@ -1,0 +1,27 @@
+.card{
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    margin-top: 5%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 55px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+
+}
+.container
+{
+    margin : auto auto;
+    padding: 0 12px;
+}
+.text-center
+{
+    text-align: center;
+    margin-bottom: 10%;
+}
+.form-field
+{
+    width: 100%;
+}
+

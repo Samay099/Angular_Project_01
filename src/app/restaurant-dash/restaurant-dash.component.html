@@ -1,0 +1,58 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <div>
+            <span>
+            <h1>Marvellous Restaurent Record App</h1>
+            </span>
+        </div>
+        <div class="toolbar-button">
+            <button type="button" (click)="openDialog()" class="styled" mat-flat-button>Add Restaurent</button>
+            <button routerLink="/login" type="button" class="styled" mat-flat-button>Log Out</button>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<table class="table mt-4 table-borderless">
+    <thead class ="head">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Restaurent Name</th>
+            <th scope="col">Restaurent Email</th> 
+            <th scope="col">Restaurent Address</th> 
+            <th scope="col">Restaurent Phone</th>
+            <th scope="col">Restaurent Services</th>
+            <th scope="col">Action </th>
+        </tr>
+    </thead>
+    <tbody class ="body">
+        <tr *ngFor="let data of allRestaurentData" >
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.mobile}}</td>
+            <td>{{data.services}}</td>
+            <td>
+                <button (click)="openDialog(data)"  class="action" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button (click)="deleteRest(data.id)"  class="action"  mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+                    <mat-icon>delete</mat-icon>
+                </button>
+                
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+  
+
+
+

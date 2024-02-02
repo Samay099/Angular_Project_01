@@ -1,0 +1,36 @@
+.styled
+{
+    line-height: 2;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-left: 5px;
+    color: #673AB7;
+}
+.action
+{
+    transform: scale(0.8);
+    margin-left: 5px;
+    font-size: 1rem;
+   
+}
+.toolbar-button
+{
+    position: relative;
+    left: 62%;
+}
+.table-borderless
+{
+    border: none;
+}
+thead.head
+{
+    text-align: center;
+    background-color: #673AB7;
+    color: white;
+}
+tbody.body
+{
+    text-align: center;
+}
+
+

@@ -1,0 +1,44 @@
+<div>
+    <div>
+        <h2 mat-dialog-title>Hello {{data.name}}</h2>
+    </div>
+    <div>
+        <mat-dialog-content [formGroup]="formValue">
+            <div>
+                <mat-form-field class="form-field" appearance="outline">
+                    <mat-label class="form-lable">Email</mat-label>
+                    <input type = "email" class="form-control" formControlName="email" matInput placeholder="someone@example.com"> 
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="form-field" appearance="outline">
+                    <mat-label class="form-lable">Name</mat-label>
+                    <input type = "text" class="form-control" formControlName="name" matInput placeholder="Fill form field"> 
+                </mat-form-field>
+            </div>
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label class="form-lable">Address</mat-label>
+                <input type = "text" class="form-control" formControlName="address" matInput placeholder="Fill form field"> 
+            </mat-form-field>
+            <div>
+                <mat-form-field class="form-field" appearance="outline">
+                    <mat-label class="form-lable">Phone</mat-label>
+                    <input type = "number" class="form-control" formControlName="mobile" matInput placeholder="999-999-9999"> 
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="form-field" appearance="outline">
+                    <mat-label class="form-lable">Services</mat-label>
+                    <input type = "text" class="form-control" formControlName="services" matInput placeholder="Fill form filed">
+                </mat-form-field>
+            </div>
+        </mat-dialog-content>
+    </div>
+    <div>
+        <mat-dialog-actions>
+            <button mat-button color="primary" (click)="onClose()">Close</button>
+            <button *ngIf="showUpdate" mat-button color="primary" (click)="updateRest()">Update</button>
+            <button *ngIf="showAdd"  mat-button color="primary" (click)="addRest()">Add</button>
+          </mat-dialog-actions>
+    </div>
+</div>

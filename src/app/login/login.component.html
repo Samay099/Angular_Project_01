@@ -1,0 +1,28 @@
+<div class = "container"> 
+    <div class = "card" >
+        <div class="text-center">
+            <h1>Marvellous Restaurent Login Portal</h1>
+            <h4>You can login here!</h4>
+        </div>
+        <form [formGroup] = "loginForm" (ngSubmit) = "logIn()">
+            <div>
+                <mat-form-field class="form-field" appearance="outline">
+                    <mat-label class="form-lable">Email</mat-label>
+                    <input [class.is-invalid]="loginForm.get('email')?.invalid" formControlName ="email" type = "email" class="form-control" matInput placeholder="someone@example.com"> 
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="form-field" appearance="outline">
+                    <mat-label class="form-lable">Password</mat-label>
+                    <input [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" formControlName ="password" type = "password" class="form-control" matInput placeholder="Enter your password">
+                </mat-form-field>
+            </div>
+            <button type="submit" mat-button color="primary">Login</button>
+            <a style="color: #424242; margin-top: 10px;" routerLink="/signup">New User? Click to Sign up</a>
+
+        </form>
+    </div>  
+</div>
+
+
+
